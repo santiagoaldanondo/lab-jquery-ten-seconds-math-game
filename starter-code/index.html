@@ -7,13 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--  Added Libraries -->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
+    <h1>Ten Seconds Math Game</h1>
+    <div class="col-md-3"></div>
+    <div class="col-md-6" id="game-options">
+      <h2>Game Options</h2>
 
+      <!--Here goes the range slider. The value in output is updated with the function rangeUpdate  -->
+      <label for="range-input">Number limit:
+        <output for="range-input" id="range-value">10</output>
+      </label>
+      <input type="range" min="10" max="100" value="10" id="range-input" step="10" oninput="rangeUpdate(value)">
 
+      <p>Operators</p>
+      <div class="col-md-4"></div>
+      <div class="col-md-4 operators-box">
+
+        <div class="col-md-6 operator-selector">
+          <input type="checkbox" checked="checked" id="check-add">
+          <img src="images/add.jpg" alt="add.jpg">
+        </div>
+
+        <div class="col-md-6 operator-selector">
+          <input type="checkbox" id="check-substract">
+          <img src="images/substract.jpg" alt="substract.jpg">
+        </div>
+
+        <div class="col-md-6 operator-selector">
+          <input type="checkbox" id="check-multiply">
+          <img src="images/multiply.jpg" alt="multiply.jpg">
+        </div>
+
+        <div class="col-md-6 operator-selector">
+          <input type="checkbox" id="check-divide">
+          <img src="images/divide.jpg" alt="divide.jpg">
+        </div>
+
+        <a class="btn btn-default" id="start-button" href="#" role="button">Start</a>
+      </div>
+    </div>
+
+    <div class="col-md-6" id="game-board">
+
+      <!-- Here is the clock -->
+      <div id="clock">
+        <span id="time-left">10</span>
+        <span>seconds left</span>
+      </div>
+
+      <!-- Here is the game over -->
+      <div id="game-over">
+        <img src="images/gameover.jpg" alt="gameover">
+      </div>
+
+      <!--Here are the question (updated with the printQuestion function)
+      and the answer input, that runs checkAnswer everytime you type on it -->
+      <span id="question-value"></span>
+      <input id="answer-input" oninput="checkAnswer(value)">
+
+      <!--Here is the restart button -->
+      <div>
+        <a class="btn btn-default" id="restart-button" href="#" role="button">Restart</a>
+      </div>
+
+    </div>
+
+    <!-- Jquery JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Custom JavaScript -->
+    <script type="text/javascript" src=js/tenSecondsMath.js></script>
+    <script type="text/javascript" src=js/application.js></script>
 
   </body>
 </html>

@@ -1,1 +1,70 @@
 /*Use this file to add your styles -there are some cool img in the images path*/
+body {
+  background-image: url("../images/board.jpg");
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 50px;
+}
+
+#game-options {
+  text-align: center;
+  background-color: #fff;
+}
+
+.operator-selector {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.operator-selector img {
+  width: 20px;
+}
+
+#game-board {
+  text-align: center;
+  background-color: #fff;
+  display: none;
+}
+
+#game-over {
+  display: none;
+}
+
+#restart-button {
+  display: none;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #3969aa;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 1px 1px #121212;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 32px;
+  width: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  margin-top: -12px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
